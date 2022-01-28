@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Cefet-Tour</string>
+    <string name="logo_string">CEFET-TOUR</string>
+    <string name="login_input_string">Login</string>
+    <string name="password_input_string">Senha</string>
+    <string name="login_button_string">Acessar</string>
+    <string name="create_account_button">Criar uma conta</string>
+    <string name="title_activity_create_account">CreateAccount</string>
+    <string name="header_button_exit">Sair</string>
+    <string name="account_creation_user_type">Tipo de Usuário</string>
+    <string name="account_creation_confirm">Cadastrar</string>
+    <string name="account_creation_success">Conta criada com sucesso.</string>
+    <string name="account_creation_error">Erro ao criar conta. Procure o suporte!</string>
+    <string name="account_edit_success">Conta editada com sucesso</string>
+    <string name="account_edit_error">Erro ao editar conta. Procure o suporte!</string>
+    <string name="account_drop_success">Conta excluída com sucesso</string>
+    <string name="account_drop_error">Erro ao excluir conta. Procure o suporte!</string>
+    <string name="create_travel_success">Viagem cadastrada com sucesso</string>
+    <string name="create_travel_error">Erro ao cadastrar viagem. Procure o suporte!</string>
+    <string name="account_creation_inicio">Inicio</string>
+    <string name="trip_available">Não há viagens disponíveis</string>
+
+
+
+
+
+</resources>

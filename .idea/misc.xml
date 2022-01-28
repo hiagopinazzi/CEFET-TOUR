@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Amanda Ozava/Desktop/Cefet-Tour/app/src/main/res/layout/activity_edit_profile.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/Cefet-Tour/app/src/main/res/layout/activity_main.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/Cefet-Tour/app/src/main/res/layout/activity_travel_creation.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/Cefet-Tour/app/src/main/res/layout/activity_travels_available.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/drawable-v24/rounded_textinput.xml" value="0.2203125" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/drawable/rounded_erro.xml" value="0.2203125" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/drawable/rounded_success.xml" value="0.2203125" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_create_account.xml" value="0.22" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_create_account_SUCCESS.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_create_account_error.xml" value="0.22" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_create_account_success.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_delete_account_error.xml" value="0.25" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_delete_account_success.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_edit_account_error.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_edit_account_success.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_edit_profile.xml" value="0.25" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_edit_profile_error.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_edit_profile_success.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_travel_create.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_travel_create_error.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_travel_create_success.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_travel_creation.xml" value="0.1213768115942029" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_travels_available.xml" value="0.25" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_travels_available_adm.xml" value="0.25" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_travels_available_adm_lista.xml" value="0.1" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/activity_travels_available_lista.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Amanda Ozava/Desktop/computacaoMovel/Cefet-Tour/app/src/main/res/layout/layout_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1125" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/drawable-v24/rounded_button.xml" value="0.2203125" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1125" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/layout/activity_create_account.xml" value="0.25" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/layout/activity_edit_profile.xml" value="0.25" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/layout/activity_travel_creation.xml" value="0.22" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/layout/activity_travels_available.xml" value="0.1" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/layout/content_create_account.xml" value="0.1" />
+        <entry key="..\:/Users/Artur/Documents/Faculdade/CEFET/P7/Cefet-Tour/app/src/main/res/layout/fragment_first.xml" value="0.1" />
+        <entry key="..\:/Users/Hiago Pinazzi/Downloads/Cefet-Tour/app/src/main/res/layout/activity_create_account.xml" value="0.2" />
+        <entry key="..\:/Users/Hiago Pinazzi/Downloads/Cefet-Tour/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
+        <entry key="..\:/Users/Hiago Pinazzi/Downloads/Cefet-Tour/app/src/main/res/layout/activity_main.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
