@@ -32,6 +32,7 @@ public class CreateAccount extends AppCompatActivity {
 
     TextInputLayout  UserNameInput, UserCPFInput, UserPhoneInput,UserBirthdayInput,UserPasswordConfirmationInput;
     TextInputLayout  UserEmailInput, UserRegistrationInput,UserAddressInput,UserPasswordInput;
+    RadioButton Useror;
     Button ConfirmAccount;
 
     @Override
@@ -49,15 +50,15 @@ public class CreateAccount extends AppCompatActivity {
         UserBirthdayInput = findViewById(R.id.UserBirthdayInput);
         UserPasswordInput = findViewById(R.id.UserPasswordInput);
         ConfirmAccount = findViewById(R.id.ConfirmAccount);
+        Useror = findViewById(R.id.UserType1Input);
 
         ConfirmAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String fullname, email, ehOrganizador, Cpf, DataNasc, Senha, Resenha, Endereco, Telefone, Matricula;
+                String fullname, email, Cpf, DataNasc, Senha, Resenha, Endereco, Telefone, Matricula,ehOrganizadorbd;
+                boolean ehOrganizador;
                 fullname = String.valueOf(UserNameInput.getEditText().getText());
-                //Log.i("TECNOLOGIA","TESTER"+fullname);
                 email = String.valueOf(UserEmailInput.getEditText().getText());
-                ehOrganizador = String.valueOf(0);
                 Cpf = String.valueOf(UserCPFInput.getEditText().getText());
                 DataNasc = String.valueOf(UserBirthdayInput.getEditText().getText());
                 Senha = String.valueOf(UserPasswordInput.getEditText().getText());
@@ -65,6 +66,16 @@ public class CreateAccount extends AppCompatActivity {
                 Endereco = String.valueOf(UserAddressInput.getEditText().getText());
                 Telefone = String.valueOf(UserPhoneInput.getEditText().getText());
                 Matricula = String.valueOf(UserRegistrationInput.getEditText().getText());
+
+                ehOrganizador = Useror.isChecked();
+                if(ehOrganizador==true)
+                {
+                    ehOrganizadorbd = String.valueOf(1);
+                }
+                else
+                {
+                    ehOrganizadorbd = String.valueOf(0);
+                }
 
                 if(!fullname.equals("") && !email.equals("") && !Senha.equals("")) {
                     Handler handler = new Handler(Looper.getMainLooper());
@@ -75,7 +86,7 @@ public class CreateAccount extends AppCompatActivity {
                             //Creating array for parameters
                             String[] field = new String[10];
                             field[0] = "fullname";
-                            field[1] = "ehOrganizador";
+                            field[1] = "ehOrganizadorbd";
                             field[2] = "Resenha";
                             field[3] = "Endereco";
                             field[4] = "Telefone";
@@ -87,7 +98,7 @@ public class CreateAccount extends AppCompatActivity {
                             //Creating array for data
                             String[] data = new String[10];
                             data[0] = fullname;
-                            data[1] = ehOrganizador;
+                            data[1] = ehOrganizadorbd;
                             data[2] = Resenha;
                             data[3] = Endereco;
                             data[4] = Telefone;
@@ -96,7 +107,7 @@ public class CreateAccount extends AppCompatActivity {
                             data[7] = Matricula;
                             data[8] = email;
                             data[9] = Senha;
-                            PutData putData = new PutData("https://locauto.projetoscomputacao.com.br/signup.php", "POST", field, data);
+                            PutData putData = new PutData("https://locauto.projetoscomputacao.com.br/signupAPI.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
@@ -131,7 +142,6 @@ public class CreateAccount extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Organizer_Radio_Option.setChecked(false);
-                Log.i("TEC","OK");
             }
         });
 

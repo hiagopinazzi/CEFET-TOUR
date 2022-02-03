@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -18,6 +19,7 @@ public class TravelCreation extends AppCompatActivity {
 
     TextInputLayout TravelNameInput, TravelInitDateInput, TravelInitTimeInput,TravelInitLocalInput,TravelDestinationDateInput;
     TextInputLayout  TravelDestinationTimeInput, TravelDestinationInput,TravelRouteInput,TravelAccommodationPlaceInput;
+    RadioButton AccomodationNO,AccommodationYES,AllowMinorYES,AllowMinorNO;
     Button ConfirmTravelCreation;
 
     @Override
@@ -33,17 +35,51 @@ public class TravelCreation extends AppCompatActivity {
         TravelDestinationTimeInput = findViewById(R.id.TravelDestinationTimeInput);
         TravelDestinationInput = findViewById(R.id.TravelDestinationInput);
         TravelRouteInput = findViewById(R.id.TravelRouteInput);
-        /*RadioButton Yes = (RadioButton) findViewById(R.id.AccommodationYES);
-        RadioButton No = (RadioButton) findViewById(R.id.AccomodationNO);
-        RadioButton MenorSim = (RadioButton) findViewById(R.id.AllowMinorYES);
-        RadioButton MenorNao = (RadioButton) findViewById(R.id.AllowMinorNO);*/
         TravelAccommodationPlaceInput = findViewById(R.id.TravelAccommodationPlaceInput);
         ConfirmTravelCreation = findViewById(R.id.ConfirmTravelCreation);
+        AccomodationNO = findViewById(R.id.AccomodationNO);
+        AccommodationYES = findViewById(R.id.AccommodationYES);
+        AllowMinorYES = findViewById(R.id.AllowMinorYES);
+        AllowMinorNO = findViewById(R.id.AllowMinorNO);
+
+
+        AccomodationNO.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AccommodationYES.setChecked(false);
+            }
+        });
+
+        AccommodationYES.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AccomodationNO.setChecked(false);
+            }
+        });
+
+        AllowMinorYES.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AllowMinorNO.setChecked(false);
+            }
+        });
+
+        AllowMinorNO.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AllowMinorYES.setChecked(false);
+            }
+        });
+
 
         ConfirmTravelCreation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String viagem, dataembarque, horarioembarque, localembarque, datadesembarque, horariodesembarque, destino,roteiro, hospedagemsim, hospedagemnao,localhospesagem,menoressim,menoresnao;
+
+                String viagem, dataembarque, horarioembarque, localembarque, datadesembarque, horariodesembarque, destino,roteiro,localhospesagem;
+                String menoresbd,hospedagembd;
+                Boolean hospedagem,menores;
+
                 viagem = String.valueOf(TravelNameInput.getEditText().getText());
                 dataembarque = String.valueOf(TravelInitDateInput.getEditText().getText());
                 horarioembarque = String.valueOf(TravelInitTimeInput.getEditText().getText());
@@ -53,7 +89,24 @@ public class TravelCreation extends AppCompatActivity {
                 destino = String.valueOf(TravelDestinationInput.getEditText().getText());
                 roteiro = String.valueOf(TravelRouteInput.getEditText().getText());
                 localhospesagem = String.valueOf(TravelAccommodationPlaceInput.getEditText().getText());
-
+                hospedagem = AccomodationNO.isChecked();
+                if(hospedagem==true)
+                {
+                    hospedagembd = String.valueOf(0);
+                }
+                else
+                {
+                    hospedagembd = String.valueOf(1);
+                }
+                menores = AllowMinorNO.isChecked();
+                if(menores==true)
+                {
+                    menoresbd = String.valueOf(0);
+                }
+                else
+                {
+                    menoresbd = String.valueOf(1);
+                }
                 if(!viagem.equals("") && !dataembarque.equals("") && !horarioembarque.equals("")) {
                     Handler handler = new Handler(Looper.getMainLooper());
                     handler.post(new Runnable() {
@@ -61,7 +114,7 @@ public class TravelCreation extends AppCompatActivity {
                         public void run() {
                             //Starting Write and Read data with URL
                             //Creating array for parameters
-                            String[] field = new String[9];
+                            String[] field = new String[11];
                             field[0] = "viagem";
                             field[1] = "dataembarque";
                             field[2] = "horarioembarque";
@@ -71,8 +124,10 @@ public class TravelCreation extends AppCompatActivity {
                             field[6] = "destino";
                             field[7] = "roteiro";
                             field[8] = "localhospesagem";
+                            field[9] = "hospedagembd";
+                            field[10] = "menoresbd";
                             //Creating array for data
-                            String[] data = new String[9];
+                            String[] data = new String[11];
                             data[0] = viagem;
                             data[1] = dataembarque;
                             data[2] = horarioembarque;
@@ -82,6 +137,8 @@ public class TravelCreation extends AppCompatActivity {
                             data[6] = destino;
                             data[7] = roteiro;
                             data[8] = localhospesagem;
+                            data[9] = hospedagembd;
+                            data[10] = menoresbd;
 
                             PutData putData = new PutData("https://locauto.projetoscomputacao.com.br/InsereViagem.php", "POST", field, data);
                             if (putData.startPut()) {
