@@ -20,7 +20,7 @@ public class TravelCreation extends AppCompatActivity {
     TextInputLayout TravelNameInput, TravelInitDateInput, TravelInitTimeInput,TravelInitLocalInput,TravelDestinationDateInput;
     TextInputLayout  TravelDestinationTimeInput, TravelDestinationInput,TravelRouteInput,TravelAccommodationPlaceInput;
     RadioButton AccomodationNO,AccommodationYES,AllowMinorYES,AllowMinorNO;
-    Button ConfirmTravelCreation;
+    Button ConfirmTravelCreation,AvailabeTrips;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,7 @@ public class TravelCreation extends AppCompatActivity {
         AccommodationYES = findViewById(R.id.AccommodationYES);
         AllowMinorYES = findViewById(R.id.AllowMinorYES);
         AllowMinorNO = findViewById(R.id.AllowMinorNO);
+        AvailabeTrips = findViewById(R.id.AvailabeTrips);
 
 
         AccomodationNO.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +72,14 @@ public class TravelCreation extends AppCompatActivity {
             }
         });
 
-
+        AvailabeTrips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TravelsAvailable.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         ConfirmTravelCreation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
