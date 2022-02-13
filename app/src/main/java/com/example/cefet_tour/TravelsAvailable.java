@@ -2,8 +2,11 @@ package com.example.cefet_tour;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -21,6 +24,7 @@ public class TravelsAvailable extends AppCompatActivity {
     String urladdress="https://locauto.projetoscomputacao.com.br/ListaViagensAPI.php";
     String[] id;
     String[] viagem;
+    Button UserProfileButton,AvailabeTrips,Exit_Account_Creation;
 
     ListView listView;
     BufferedInputStream is;
@@ -30,6 +34,37 @@ public class TravelsAvailable extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travels_available);
+
+        UserProfileButton = findViewById(R.id.UserProfileButton);
+        UserProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), EditProfile.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        AvailabeTrips = findViewById(R.id.AvailabeTrips);
+        AvailabeTrips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TravelCreation.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        Exit_Account_Creation = findViewById(R.id.Exit_Account_Creation);
+        Exit_Account_Creation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         ListView  listView = findViewById(R.id.listView);
         StrictMode.setThreadPolicy((new StrictMode.ThreadPolicy.Builder().permitNetwork().build()));

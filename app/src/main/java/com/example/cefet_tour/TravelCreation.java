@@ -20,7 +20,7 @@ public class TravelCreation extends AppCompatActivity {
     TextInputLayout TravelNameInput, TravelInitDateInput, TravelInitTimeInput,TravelInitLocalInput,TravelDestinationDateInput;
     TextInputLayout  TravelDestinationTimeInput, TravelDestinationInput,TravelRouteInput,TravelAccommodationPlaceInput;
     RadioButton AccomodationNO,AccommodationYES,AllowMinorYES,AllowMinorNO;
-    Button ConfirmTravelCreation,AvailabeTrips;
+    Button ConfirmTravelCreation,AvailabeTrips,UserProfileButton,Exit_Account_Creation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,8 @@ public class TravelCreation extends AppCompatActivity {
         AllowMinorYES = findViewById(R.id.AllowMinorYES);
         AllowMinorNO = findViewById(R.id.AllowMinorNO);
         AvailabeTrips = findViewById(R.id.AvailabeTrips);
-
+        UserProfileButton = findViewById(R.id.UserProfileButton);
+        Exit_Account_Creation = findViewById(R.id.Exit_Account_Creation);
 
         AccomodationNO.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +81,25 @@ public class TravelCreation extends AppCompatActivity {
                 finish();
             }
         });
+
+        UserProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), EditProfile.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        Exit_Account_Creation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         ConfirmTravelCreation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -148,7 +168,7 @@ public class TravelCreation extends AppCompatActivity {
                             data[9] = hospedagembd;
                             data[10] = menoresbd;
 
-                            PutData putData = new PutData("https://locauto.projetoscomputacao.com.br/InsereViagem.php", "POST", field, data);
+                            PutData putData = new PutData("https://locauto.projetoscomputacao.com.br/InsereViagemAPI.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
