@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="600px">
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="#ffffff"
         android:padding="15dp">
 
         <ImageView
@@ -14,34 +13,42 @@
             android:layout_width="70dp"
             android:layout_height="86dp"
             android:layout_weight="1"
-            android:src="@drawable/schoolbus"/>
+            android:src="@drawable/localizacaodomapa" />
 
         <TextView
             android:id="@+id/tvprofilename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="26dp"
             android:layout_marginStart="26dp"
+            android:layout_marginLeft="26dp"
             android:layout_marginTop="16dp"
             android:layout_toEndOf="@id/imageView"
             android:layout_toRightOf="@id/imageView"
-            android:textColor="#333"
-            android:textSize="22dp"
-            />
+            android:textColor="@color/Blue"
+            android:textSize="22dp" />
 
         <TextView
             android:id="@+id/tvemail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="26dp"
             android:layout_marginStart="26dp"
+            android:layout_marginLeft="26dp"
             android:layout_marginTop="50dp"
             android:layout_toEndOf="@id/imageView"
             android:layout_toRightOf="@id/imageView"
-            android:textColor="#333"
-            android:textSize="22dp"
-            />
+            android:textColor="@color/Blue"
+            android:textSize="22dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="150dp"
+            android:layout_weight="1"
+            android:text="Ver" />
+
 </RelativeLayout>
 </LinearLayout>

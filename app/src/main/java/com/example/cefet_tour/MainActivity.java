@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                                                 if (result.equals("SUCESSO NO LOGIN!")) {
                                                     //Log.i("ENTROU1", "ENTROU1");
                                                     Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-                                                    Intent intent = new Intent(getApplicationContext(), TravelCreation.class);
+                                                    Intent intent = new Intent(getApplicationContext(), EditProfile.class);
                                                     startActivity(intent);
                                                     finish();
                                                 } else {

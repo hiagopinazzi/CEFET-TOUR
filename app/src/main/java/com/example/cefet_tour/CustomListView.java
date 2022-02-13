@@ -21,40 +21,20 @@ import java.net.URL;
 public class CustomListView extends ArrayAdapter<String> {
     private String[] id;
     private String[] viagem;
-    /*private String[] dataembarque;
-    private String[] horarioembarque;
-    private String[] localembarque;
-    private String[] datadesembarque;
-    private String[] horariodesembarque;
-    private String[] destino;
-    private String[] roteiro;
-    private String[] localhospedagem;
-    private String[] hospedagembd;
-    private String[] menoresbd;*/
     private Activity context;
 
-    public CustomListView(Activity context,String[] id,String[] viagem/*, String[] dataembarque,String[] horarioembarque,String[] localembarque,String[] datadesembarque,String[] horariodesembarque,String[] destino,String[] roteiro,String[] localhospedagem,String[] hospedagembd,String[] menoresbd*/) {
+    public CustomListView(Activity context,String[] id,String[] viagem) {
         super(context,R.layout.layout,id);
         this.context=context;
         this.id=id;
         this.viagem=viagem;
-        /*this.dataembarque=dataembarque;
-        this.horarioembarque=horarioembarque;
-        this.localembarque=localembarque;
-        this.datadesembarque=datadesembarque;
-        this.horariodesembarque=horariodesembarque;
-        this.destino=destino;
-        this.roteiro=roteiro;
-        this.localhospedagem=localhospedagem;
-        this.hospedagembd=hospedagembd;
-        this.menoresbd=menoresbd;*/
     }
     @NonNull
     @Override
 
     public View getView(int position, @Nullable View convertView,@NonNull ViewGroup parent){
         View r=convertView;
-        ViewHolder viewHolder = null;
+        ViewHolder viewHolder ;
         if(r==null)
         {
             LayoutInflater layoutInflater=context.getLayoutInflater();
